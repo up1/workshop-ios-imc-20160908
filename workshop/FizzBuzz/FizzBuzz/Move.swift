@@ -5,4 +5,6 @@ enum Move {
     case Fizz
     case Buzz
     case FizzBuzz
+    case IMC
+    case Invalid
 }

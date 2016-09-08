@@ -13,10 +13,11 @@ class Game: NSObject {
     
     func play(move: Move) -> (right: Bool, score: Int) {
         let result = brain.check(score + 1)
-        
-        //TODO: your task
-        score += 1
-        return (true, score)
+        if result == move || result == Move.IMC {
+            score += 1
+            return (true, score)
+        }
+        return (false, score)
     }
     
 }
